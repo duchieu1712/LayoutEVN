@@ -83,25 +83,33 @@ nav .nav-item::after {
   background-color: #ba282e;
   opacity: 0;
 }
+nav .nav-item:focus {
+  background-color: #f6f5ff;
+}
+nav .nav-item:focus ::after {
+  background-color: #f6f5ff;
+  color: #313193;
+}
 nav a {
   color: #000;
 }
 nav a:hover {
   color: #000;
 }
-nav li i {
+nav i {
   color: rgba(50, 50, 50, 1);
 }
-nav .nav-item.active::after {
+nav span {
+  margin-left: 4px;
+}
+nav .active::after {
   opacity: 1;
 }
 nav .active {
   background-color: #f6f5ff;
-}
-nav .active i {
   color: #313193;
 }
-nav .active a {
+nav .active i {
   color: #313193;
 }
 
@@ -132,6 +140,9 @@ nav .active a {
   justify-content: center;
   margin-right: 20px;
   /* filter: drop-shadow(2px 3px 10px rgba(0, 0, 0, 0.25)); */
+}
+.righticon {
+  color: #fff;
 }
 
 .avatar {
@@ -185,33 +196,28 @@ nav .active a {
     0px 3.75px 11px rgba(0, 0, 0, 0.19);
   border-radius: 4px;
 }
-.dropdown .show {
-  transform: translate3d(-20px, 35px, 0px) !important;
-}
-.dropdown .fade-out {
-  transform: translate3d(-20px, 35px, 0px) !important;
-}
 .dropdown-menu p {
   margin-left: 15px;
   margin-bottom: 0;
   font-weight: bold;
   font-size: 12px;
   line-height: 20px;
+  color: #313193;
 }
 .dropdown-menu .dropdown-item:hover {
-  background-color: #F0EEFF;
+  background-color: #f0eeff;
 }
 
 /* Sidebar */
 .sidebar {
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
   width: 240px;
   position: absolute;
   top: 0;
   left: 0;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
 }
-.headerSidebar{
+.headerSidebar {
   background-color: #fff;
   display: flex;
   justify-content: space-between;
@@ -220,9 +226,39 @@ nav .active a {
   padding-left: 18px;
   padding-right: 11px;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
+  margin-bottom: 1px;
 }
 
-.sidenav{
+.menu {
+  background-color: #fff;
+  padding-top: 23px;
+}
+.menu ul {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+}
+.menu a {
+  color: #262626;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  height: 34px;
+  width: 100%;
+}
+.menu a span {
+  color: #7b7b7b;
+  margin-right: 17px;
+  font-size: 18px;
+}
+/* Small menu */
+.menu .dropIcon{
+  margin-right: 0;
   position: absolute;
-  top: 56px;
+  right: 14px;
+}
+.menu .smallItem{
+  padding-left: 55px;
 }

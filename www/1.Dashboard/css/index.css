@@ -15,25 +15,13 @@ body {
 
 /* DASH BOARD */
 .backGroundDashBoard {
-  background-image: url(../image/background1.png);
+  background-image: url(../image/background1.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   width: 100%;
   height: 100%;
   position: relative;
-}
-.backGroundDashBoard .star {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-image: url(../image/stars.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  width: 300px;
-  height: 300px;
-  z-index: 0;
 }
 .backGroundDashBoard .header {
   display: flex;
@@ -52,12 +40,12 @@ body {
   color: #ffffff;
   margin-right: 45px;
   font-size: 14px;
+  display: flex;
 }
 .backGroundDashBoard .header .right .icon1 {
-  object-fit: cover;
   width: 15px;
   height: 15px;
-  margin-right: 10px;
+  margin-right: 15px;
 }
 .backGroundDashBoard .title .logo {
   text-align: center;
@@ -66,10 +54,12 @@ body {
 .backGroundDashBoard .title h4 {
   text-align: center;
   color: white;
+  text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25); 
 }
 .backGroundDashBoard .title .divider {
   text-align: center;
 }
+
 .backGroundDashBoard .menu {
   margin-top: 100px;
   display: flex;
@@ -128,6 +118,7 @@ body {
 }
 .backGroundDashBoard .menu .opacity{
   opacity: 0.6;
+  color: #000;
 }
 .backGroundDashBoard .menu .opacity:hover{
   opacity: 1;
@@ -231,14 +222,9 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  background: url(../image/background2.png) no-repeat center center;
+  background: url(../image/background2.jpg) no-repeat center center;
   background-size: cover;
-}
-.backgroundLogin::before {
-  content: url(../image/stars.png);
-  position: absolute;
-  top: 0;
-  left: 0;
+  
 }
 .loginContent {
   position: absolute;
@@ -261,7 +247,11 @@ body {
   margin-bottom: 23px;
 }
 .logo {
-  margin-bottom: 16px;
+  margin-bottom: 14px;
+}
+.logoEVN h4{
+  text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25);
+  color: #fff;
 }
 
 /* Customize input */
@@ -277,7 +267,7 @@ body {
   background-color: #fff;
   margin-bottom: 24px;
 }
-.inputAccount i {
+.inputAccount .icon {
   position: absolute;
   left: 23px;
   top: 50%;
@@ -317,6 +307,7 @@ body {
   padding-left: 54px;
   height: 100%;
   padding-top: 22px;
+  color: #000;
 }
 
 .loginContent .btn {
